@@ -1,4 +1,4 @@
-/* m003.c - Check if a positive integer is prime.
+ /* m003.c - Check if a positive integer is prime.
 
    This program takes a non-zero positive integer read as a 
    command line argument and outputs 1 or 0 depending on
@@ -23,7 +23,25 @@
 
 int is_prime (int a)
 {
-  return 0;
+  int r, i, p;
+  i = 2;
+  r = 2;
+  while ((i < a) && (r != 0))
+    {
+    r = (a % i);
+    i++;
+    }
+    if (r == 0)
+    {
+    p = 0;
+    }
+    else
+    {
+    p = 1;
+    }
+ 
+    
+  return p;
 }
 
 #define USAGE "m003 <num>\n"

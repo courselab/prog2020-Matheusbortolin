@@ -20,6 +20,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 /* Return the value in decimal base of the string b, interpreted
    as the a positive binary number. If the string contains any
@@ -29,9 +30,22 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+  int n,i,v;
+  int d;
+ 
+  n = strlen(b);
+  v = 0;
+  i = 0;
+  d = n-1;
+  while (i<n)
+    { 
+    v = v + (b[i]-'0')*pow(2,d);  
+    i++;
+    d--;
+    }
+return v;
 }
+ 
 
 #define USAGE "m004 <string>\n"
 
