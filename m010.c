@@ -30,7 +30,32 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int dias[12];
+  *dias = 31;
+  *(dias + 1) = 29;
+  *(dias + 2) = 31;
+  *(dias + 3) = 30;
+  *(dias + 4) = 31;
+  *(dias + 5) = 30;
+  *(dias + 6) = 31;
+  *(dias + 7) = 31;
+  *(dias + 8) = 30;
+  *(dias + 9) = 31;
+  *(dias + 10) = 30;
+  *(dias + 11) = 31;
+  int i,d,s;
+  i = 0;
+  d = 0;
+  
+  
+  for (i=0 ;i<month-1; i++)
+    d = d + dias[i];
+  
+  d =  d + day;
+  s = d%7 + 4;
+
+
+  return s;
 }
 
 /* Do not edit function main. */
