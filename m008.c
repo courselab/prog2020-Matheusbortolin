@@ -22,6 +22,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX 256
 
@@ -30,6 +31,56 @@
 
 void lastname (char *s)
 {
+  int i=0;
+  int d=0;
+  int e=0;
+  int x=0;
+
+
+  char t[MAX];
+
+  strcpy(t, s);
+
+    while (*(t+i)!= 0)
+      {
+        if ((*(t+i) == 32) || (*(t+i) == 9))
+          {
+          d = i;
+          i++;
+          }
+        else
+          i++;
+      }
+      
+    while(*(t+d+e+1)!= 0)
+    {
+      if ((*(t+d+1+e) <= 90) && (*(t+d+1+e) >= 65))
+        {
+          *(s+e) = *(t+d+1+e);
+          e++;
+        }
+      else
+        if ((*(t+d+1+e) <= 122) && (*(t+d+1+e) >= 97))
+          {
+            *(s+e) = (*(t+d+1+e) - 32);
+            e++;
+          }
+        else
+          e++;
+    }
+    *(s+e-1) = 44;
+    *(s+e) = 32;
+
+    while (x<d)
+        {
+        *(s+e+1) = *(t+x);
+        e++;
+        x++;
+        }
+
+
+
+  
 }
 
 

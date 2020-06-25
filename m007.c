@@ -28,7 +28,30 @@
 
 int lettercount (char *s)
 {
-  return 0;
+  int i,d;
+  i=0;
+  d=0;
+while (*(s+i)!= 0)
+    if ((*(s+i) >= 65) && (*(s+i) <= 90)) 
+      {
+        d = d + 1;
+        i++;
+      }
+    else
+      {
+        if ((*(s+i) >= 97) && (*(s+i) >= 65)) 
+          {
+          d = d + 1;
+          i++;
+          }
+        else
+          {
+          d = d + 0;
+          i++;
+          }
+    
+      }  
+return d;
 }
 
 
