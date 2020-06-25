@@ -28,18 +28,33 @@
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
 
+int elevado (int l)
+  {
+    int x,y;
+    x = 0;
+    y = 1;
+    while (x<l)
+      {
+       y = y * 2;
+       x++;
+      }
+    return y;
+  }
+
 int decimal (char *b)
 {
   int n,i,v;
   int d;
- 
+  
   n = strlen(b);
   v = 0;
   i = 0;
   d = n-1;
+
   while (i<n)
     { 
-    v = v + (b[i]-'0')*pow(2,d);  
+
+    v = v + (b[i]-'0')* elevado(d);  
     i++;
     d--;
     }

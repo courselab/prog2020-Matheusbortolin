@@ -28,18 +28,19 @@ int is_prime (int a)
   r = 2;
   while ((i < a) && (r != 0))
     {
-    r = (a % i);
-    i++;
+      r = (a % i);
+      i++;
     }
-    if (r == 0)
-    {
-    p = 0;
-    }
-    else
-    {
-    p = 1;
-    }
- 
+      if (r == 0)
+        {
+        p = 0;
+        }
+      else
+        {
+        p = 1;
+        }
+  if ((a == 2) || (a==1) || (a==0))
+    {p=1;}
     
   return p;
 }

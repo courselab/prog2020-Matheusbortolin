@@ -52,7 +52,7 @@ int day_of_week (int day, int month)
     d = d + dias[i];
   
   d =  d + day;
-  s = d%7 + 4;
+  s = d%7 + 2;
 
 
   return s;
