@@ -31,7 +31,7 @@ int is_prime (int a)
       r = (a % i);
       i++;
     }
-      if (r == 0)
+      if ((r == 0) || (a==1) || (a==0))
         {
         p = 0;
         }
@@ -39,7 +39,7 @@ int is_prime (int a)
         {
         p = 1;
         }
-  if ((a == 2) || (a==1) || (a==0))
+  if (a == 2) 
     {p=1;}
     
   return p;
