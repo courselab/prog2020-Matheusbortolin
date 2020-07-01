@@ -45,7 +45,7 @@ int day_of_week (int day, int month)
   *(dias + 11) = 30;
   *(dias + 12) = 31;
   int i,d,s;
-  d = 4;
+  d = 3;
   
   
   for (i=0 ;i<month; i++)
