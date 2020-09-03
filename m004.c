@@ -20,6 +20,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 /* Return the value in decimal base of the string b, interpreted
    as the a positive binary number. If the string contains any
@@ -27,11 +28,39 @@
    right before the spurious character (eg. truncate 110x001
    into 110); an empty string means zero. */
 
+int elevado (int l)
+  {
+    int x,y;
+    x = 0;
+    y = 1;
+    while (x<l)
+      {
+       y = y * 2;
+       x++;
+      }
+    return y;
+  }
+
 int decimal (char *b)
 {
+  int n,i,v;
+  int d;
   
-  return 0;
+  n = strlen(b);
+  v = 0;
+  i = 0;
+  d = n-1;
+
+  while (i<n)
+    { 
+
+    v = v + (b[i]-'0')* elevado(d);  
+    i++;
+    d--;
+    }
+return v;
 }
+ 
 
 #define USAGE "m004 <string>\n"
 

@@ -28,6 +28,16 @@
 
 int wordcount (char *filename)
 {
+  FILE *fp;
+  char a[100000]
+  int n;
+  fp = fopen ("filename", "r")
+  fgets (a, 10000 ,fp)
+    while n != EOF
+
+
+
+  
   return 0;
 }
 
